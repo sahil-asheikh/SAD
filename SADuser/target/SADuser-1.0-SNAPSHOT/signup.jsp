@@ -29,30 +29,23 @@
 
         <div class="wrapper">
             <!-- Sidebar  -->
-
-
             <!-- Page Content  -->
             <div id="content">
-
-
-
                 <div class="container">
-
                     <h3 class="text-center text-success">Sign up <span class="text-secondary" style="font-size: 15px">-for free web hosting</span></h3>
                     <br>
-                    <form  method="post" action="UserController" name="frm" >
+                    <form method="post" action="User_controller" name="frm" >
+                        <input type="hidden" name="action" value="register_user">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="">First Name</label>
-                                <input type="hidden" name="action" value="insert">
                                 <input type="text" class="form-control" id="" placeholder="Enter first Name" name="txtFirstName" value="" onkeyup="checkNum();">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="">Last Name</label>
                                 <input type="text" class="form-control" id="" placeholder="Enter Last Name" name="txtLastName" onkeyup="checkNum1();">
-
                             </div>
-                             <div class="form-group col-md-6">
+                            <div class="form-group col-md-6">
                                 <label for="">Mobile No.</label>
                                 <input type="number" class="form-control" placeholder="Enter Mobile Number" name="txtContact">
                             </div>
@@ -67,60 +60,49 @@
                             <div class="form-group col-md-6">
                                 <label for="">Re-Enter Password</label> &nbsp;&nbsp;&nbsp;&nbsp;<span id='message'></span>
                                 <input type="password" class="form-control" placeholder="Re-Enter Password" name="txtConfirmPass" id="confirm_password" onkeyup="check();">
-
                             </div>
-                          
                             <div class="form-group col-md-6">
-      
-                <label for="">Education</label>
-                <select name="selectEdu" class="form-control">
-                    <option selected>Choose...</option>
-                    <option value="BE">BE</option>
-                    <option value="MCA">MCA</option>
-                    <option value="MCM">MCM</option>
-                    <option value="PGDCA">PGDCA</option>
-                    <option value="BCA">BCA</option>
-                    <option value="BCOM">BCOM</option>
-                    
-                    <option value="OTHER">OTHER</option>
-                </select>
-                
-            </div>
-                    <div class="form-group col-md-6">
-       <label for="">Semister</label>          
-                <select name="selectSem" class="form-control">
-                    <option selected>Choose...</option>
-                    <option value="I">I</option>
-                    <option value="II">II</option>
-                    <option value="III">III</option>
-                    <option value="IV">IV</option>
-                    <option value="V">V</option>
-                    <option value="VI">VI</option>
-                    <option value="VII">VII</option>
-                    <option value="VIII">VIII</option>
-                  <option value="OTHER">OTHER</option>
-               </select>
-                    </div>
+                                <label for="">Education</label>
+                                <select name="selectEdu" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option value="BE">BE</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="MCM">MCM</option>
+                                    <option value="PGDCA">PGDCA</option>
+                                    <option value="BCA">BCA</option>
+                                    <option value="BCOM">BCOM</option>
+                                    <option value="OTHER">OTHER</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Semister</label>          
+                                <select name="selectSem" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option value="I">I</option>
+                                    <option value="II">II</option>
+                                    <option value="III">III</option>
+                                    <option value="IV">IV</option>
+                                    <option value="V">V</option>
+                                    <option value="VI">VI</option>
+                                    <option value="VII">VII</option>
+                                    <option value="VIII">VIII</option>
+                                    <option value="OTHER">OTHER</option>
+                                </select>
+                            </div>
                             <div class="form-group col-md-6">
                                 <label for="">College</label>
                                 <input type="text" class="form-control" placeholder="Enter College Name" name="txtCollege">
                             </div>
-                             <div class="form-group col-md-6">
+                            <div class="form-group col-md-6">
                                 <label for="">City</label>
                                 <input type="text" class="form-control" placeholder="Enter City Name" name="txtCity">
                             </div>
-                            
                             <button type="submit" class="btn btn-outline-success" onclick="return val();">Sign in</button>
                         </div>
                     </form>
-                </div>     
-
-
-
+                </div>
             </div>
             <!-- /content-->
-
-
         </div>
         <!--Main Div Close -->   
 
@@ -136,10 +118,7 @@
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 
-
-
         <!--My JAVASCRIPT -->    
         <script src="Assets/myjs/validation.js"></script>
     </body>
-
 </html>

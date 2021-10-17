@@ -27,77 +27,49 @@
 
         <!-- Font Awesome JS -->
         <!--Sweet Alert -->
-    <script src="Assets/myjs/sweetalert.js"></script>
-    <link rel="stylesheet" href="Assets/mycss/sweetalert.css">
-      
-<!-- Validation -->
+        <script src="Assets/myjs/sweetalert.js"></script>
+        <link rel="stylesheet" href="Assets/mycss/sweetalert.css">
 
-
+        <!-- Validation -->
 
     </head>
     <body>
-
         <div class="wrapper">
             <!-- Sidebar  -->
-
-
             <!-- Page Content  -->
             <div id="content">
-                
-
                 <div class="row">
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4">
                         <div class="shadow-lg p-3 mb-5 bg-success rounded">
-                                                    
-                            <form method="post" action="LoginController"> 
-                                 <h3 class="text-center text-light">SAD Login</h3>
+                            <form method="post" action="User_controller">
+                                <input type="hidden" class="form-control" name="action" value="login">
+                                <h3 class="text-center text-light">SAD Login</h3>
                                 <div class="text-light">
                                     <div class="form-group">
                                         <hr class="my-4 bg-light">
                                         <label >Mobile Number</label>
-                                        <input type="hidden" class="form-control" name="action" value="login">
-                                        <input type="number" class="form-control" placeholder="Enter Mobile Number" name="user">
+                                        <input type="number" class="form-control" placeholder="Enter Mobile Number" name="user" required="">
                                     </div>
-                                    
                                     <div class="form-group">
                                         <label for="">Password</label>
-                                        <input type="password" class="form-control" placeholder="Enter Your Password" name="pass">
+                                        <input type="password" class="form-control" placeholder="Enter Your Password" name="pass" required="">
                                         <hr class="my-4 bg-light">
-                                         <input type="submit" class="btn btn-outline-light btn-sm" style="margin-left: 35%"  value="Login" onclick="return val();">
-                                         <a href="signup.jsp"> <input type="button" class="btn btn-outline-light btn-sm" value="Sign up"> </a>
-                                      
-                                         <span class="text-danger">${param.message}</span>
-                                       
-                                       
+                                        <input type="submit" class="btn btn-outline-light btn-sm" style="margin-left: 35%"  value="Login" onclick="return val();">
+                                        <a href="signup.jsp"> <input type="button" class="btn btn-outline-light btn-sm" value="Sign up"> </a>
+                                        <span class="text-danger">${param.message}</span>
                                     </div>
                                 </div>
                             </form>
                             <hr class="my-4 bg-light">
-                         
                         </div>
-
                     </div>
                     <div class="col-sm-4 bg-light"></div> 
                 </div>
-
-
-
-
-
             </div>
             <!-- /content-->
-
-
-
-
-
-
-
-
         </div>
         <!--Main Div Close -->   
-
 
 
 
@@ -107,12 +79,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <!-- Bootstrap JS -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-
-
-
-        <!--My JAVASCRIPT -->    
-
+        <!--My JAVASCRIPT -->
     </body>
-
 </html>

@@ -1,6 +1,5 @@
-/*
-    DEMO STYLE    #7ccc6d  f #2bdc38  r #2bdc38
-*/
+/*DEMO STYLE    #7ccc6d  f #2bdc38  r #2bdc38*/
+
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
@@ -15,6 +14,7 @@ p {
     line-height: 1.7em;
     color: #999;
 }
+
 
 a,
 a:hover,
