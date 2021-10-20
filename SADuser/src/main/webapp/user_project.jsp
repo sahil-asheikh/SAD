@@ -76,7 +76,7 @@
                                         </td>
                                         <td>
                                             <%
-                                                String projectName = project.getProject().replace(ResponseMessages.PROJECT_PATH.getResponseMessages() + String.valueOf(session.getAttribute("user_id")), "");
+                                                String projectName = project.getProject().replace(String.valueOf(session.getAttribute("user_id")), "");
                                             %>
                                             <%= Utils.isEmpty(project.getProject()) ? "Project is not available" : projectName%>
                                         </td>

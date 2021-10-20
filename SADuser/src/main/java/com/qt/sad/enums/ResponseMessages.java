@@ -22,9 +22,7 @@ public enum ResponseMessages {
     FILE_DELETED("File deleted"),
     FILE_UPDATED("File updated"),
     FILE_DOWNLOADED("File downloaded"),
-    FILE_NOT_FOUND("File not found"),
-    PROJECT_PATH("D:\\QaswaTech\\WORKSPACE\\files\\projects\\"),
-    DATABASE_PATH("D:\\QaswaTech\\WORKSPACE\\files\\databases\\");
+    FILE_NOT_FOUND("File not found");
 
     private String responseMessages;
 

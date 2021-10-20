@@ -1,3 +1,5 @@
+<%@page import="com.qt.sad.model.Tblsystemparameter"%>
+<%@page import="com.qt.sad.service.System_Parameter_service"%>
 <%@page import="java.io.File"%>
 <%@page import="com.qt.sad.enums.ResponseMessages"%>
 <%@page import="com.qt.sad.model.Tblproject"%>
@@ -37,6 +39,7 @@
             Subdomain_service subdomain_service = new Subdomain_service();
             Db_service db_service = new Db_service();
             Project_service project_service = new Project_service();
+            System_Parameter_service system_Parameter_service = new System_Parameter_service();
         %>
 
         <div class="wrapper">
@@ -168,7 +171,7 @@
                                             <tr>
                                                 <td> <span>Database: </span></td>
                                                 <%
-                                                    String dbName = db.getDb().replace(ResponseMessages.DATABASE_PATH.getResponseMessages() + user.getUser_id(), "");
+                                                    String dbName = db.getDb().replace(user.getUser_id(), "");
                                                 %>
                                                 <td> <span class="text-success"><%= db_service.checkDbByUserId(String.valueOf(session.getAttribute("user_id"))) ? dbName : "Please setup your Database"%></span></td>
                                             </tr>
@@ -208,7 +211,7 @@
                                             <tr>
                                                 <td> <span>Project:</span></td>
                                                 <%
-                                                    String projectName = project.getProject().replace(ResponseMessages.PROJECT_PATH.getResponseMessages() + user.getUser_id(), "");
+                                                    String projectName = project.getProject().replace(user.getUser_id(), "");
                                                 %>
                                                 <td> <span class="text-success"><%= project_service.checkProjectByUserId(String.valueOf(session.getAttribute("user_id"))) ? projectName : "Please upload your project"%></span></td>
                                             </tr>

@@ -7,7 +7,9 @@ package com.qt.sad.controllers;
 
 import com.qt.sad.enums.ResponseMessages;
 import com.qt.sad.model.Tblproject;
+import com.qt.sad.model.Tblsystemparameter;
 import com.qt.sad.service.Project_service;
+import com.qt.sad.service.System_Parameter_service;
 import com.qt.sad.utility.Utils;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -81,7 +83,9 @@ public class Project_controller extends HttpServlet {
     }// </editor-fold>
 
     private void insert_project(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String path = ResponseMessages.PROJECT_PATH.getResponseMessages(); // path where all the resumes will save
+        System_Parameter_service system_Parameter_service = new System_Parameter_service();
+        Tblsystemparameter systemparameters = system_Parameter_service.getParameterByName("path_project");
+        String path = systemparameters.getSystem_parameter_value();
         String user_id = request.getParameter("user_id");
         try {
 //            creating the object of Parts to get and read the resume name
@@ -102,13 +106,13 @@ public class Project_controller extends HttpServlet {
                     is.read(data);      // reads the resume name
 
                     //FileOutputStream is used for writing streams of raw bytes such as image data, file data
-                    FileOutputStream fos = new FileOutputStream(path + projectFileUploaded);   // creating object with path and fileName parameters
+                    FileOutputStream fos = new FileOutputStream(path + File.separator + projectFileUploaded);   // creating object with path and fileName parameters
                     fos.write(data);    // storing file at the path location
                     fos.close();    // closing the FileOutputStream
 
 //                  renaming the resume with the unique name same as stored in database i.e. fileName
-                    File file = new File(path + projectFileUploaded);  // Create an object of the File class to Replace the file path with path of the directory
-                    File rename = new File(path + newProjectFileName);    // Create an object of the File class to Replace the file path with path of the directory
+                    File file = new File(path + File.separator + projectFileUploaded);  // Create an object of the File class to Replace the file path with path of the directory
+                    File rename = new File(path + File.separator + newProjectFileName);    // Create an object of the File class to Replace the file path with path of the directory
                     file.renameTo(rename);   //executing the file to change the name
                 }
             } else {
@@ -124,8 +128,10 @@ public class Project_controller extends HttpServlet {
     private void download_project(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
             String user_id = Utils.requiredNotNull(request.getParameter("user_id"), "User ID must not be zero");
-            String project_path = project_service.selectProjectPath(user_id);
-            System.out.println("com.qt.sad.controllers.Project_controller.download_project()::PATH::" + project_path);
+            System_Parameter_service system_Parameter_service = new System_Parameter_service();
+            Tblsystemparameter systemparameters = system_Parameter_service.getParameterByName("path_db");
+            String path = systemparameters.getSystem_parameter_value();
+            String project_path = path + File.separator + project_service.selectProjectPath(user_id);
             message = project_service.download_file(project_path, request, response);
         } catch (Exception e) {
             message = "com.qt.sad.controllers.Project_controller.download_project()::" + e.getMessage();

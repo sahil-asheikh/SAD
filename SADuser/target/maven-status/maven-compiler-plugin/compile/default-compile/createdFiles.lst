@@ -1,3 +1,4 @@
+com\qt\sad\service\System_Parameter_service.class
 com\qt\sad\controllers\Subdomain_controller.class
 com\qt\sad\controllers\Admin_controller.class
 com\qt\sad\dao\TblUser_dao.class
@@ -16,10 +17,13 @@ com\qt\sad\model\Tbldb.class
 com\qt\sad\controllers\Db_controller.class
 com\qt\sad\dao\TblDb_dao.class
 com\qt\sad\dao\TblAdmin_dao.class
+com\qt\sad\controllers\System_Parameter_controller.class
+com\qt\sad\model\Tblsystemparameter.class
 com\qt\sad\service\Admin_service.class
 com\qt\sad\model\Tbluser.class
 com\qt\sad\service\User_service.class
 com\qt\sad\service\Db_service.class
 com\qt\sad\utility\Utils.class
 com\qt\sad\database\Saddu.class
+com\qt\sad\dao\System_Parameter_dao.class
 com\qt\sad\controllers\Project_controller.class

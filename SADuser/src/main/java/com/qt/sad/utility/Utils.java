@@ -61,8 +61,6 @@ public class Utils {
 //        System.out.println(generatePublicId(30));
 //        System.out.println(isEmpty(generatePublicId(30)));
 //        System.out.println(isEmpty(""));
-        System.out.println(ResponseMessages.DATABASE_PATH.getResponseMessages() + "oa3yt578suij87aurw9aih34yau29Dump20210929.sql");
-        System.out.println(checkFileType(ResponseMessages.DATABASE_PATH.getResponseMessages() + "oa3yt578suij87aurw9aih34yau29Dump20210929.sql", ".sql"));
     }
 
 }

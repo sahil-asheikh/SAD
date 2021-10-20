@@ -45,8 +45,8 @@ public class System_Parameter_service {
         return system_Parameter_dao.select_system_parameters();
     }
 
-    public Tblsystemparameter selectParameterByName(String sp_name) {
-        return system_Parameter_dao.selectParameterByName(sp_name);
+    public Tblsystemparameter getParameterByName(String sp_name) {
+        return system_Parameter_dao.getParameterByName(sp_name);
     }
 
 }

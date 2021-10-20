@@ -1,12 +1,14 @@
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\controllers\Admin_controller.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\model\Tbldb.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\Test\Sad_test.java
+D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\model\Tblsystemparameter.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\controllers\Db_controller.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\model\Tbladmin.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\service\Db_service.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\utility\Utils.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\dao\TblAdmin_dao.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\controllers\Subdomain_controller.java
+D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\controllers\System_Parameter_controller.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\controllers\User_controller.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\model\Tblsubdomain.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\service\User_service.java
@@ -18,6 +20,8 @@ D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\dao\TblDb_dao.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\service\Subdomain_service.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\Test\TestDeleteFIleFromRoot.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\service\Admin_service.java
+D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\service\System_Parameter_service.java
+D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\dao\System_Parameter_dao.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\enums\ResponseMessages.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\dao\TblUser_dao.java
 D:\QaswaTech\WORKSPACE\SAD\SADuser\src\main\java\com\qt\sad\service\Project_service.java

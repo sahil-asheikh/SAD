@@ -104,7 +104,7 @@
                                             </td>
                                             <td>
                                                 <%
-                                                    String dbName = db.getDb().replace(ResponseMessages.DATABASE_PATH.getResponseMessages() + String.valueOf(session.getAttribute("user_id")), "");
+                                                    String dbName = db.getDb().replace(String.valueOf(session.getAttribute("user_id")), "");
                                                 %>
                                                 <%= Utils.isEmpty(db.getDb()) ? "Database file not available" : dbName%>
                                             </td>

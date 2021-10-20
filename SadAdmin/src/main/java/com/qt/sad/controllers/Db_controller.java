@@ -7,7 +7,9 @@ package com.qt.sad.controllers;
 
 import com.qt.sad.enums.ResponseMessages;
 import com.qt.sad.model.Tbldb;
+import com.qt.sad.model.Tblsystemparameter;
 import com.qt.sad.service.Db_service;
+import com.qt.sad.service.System_Parameter_service;
 import com.qt.sad.utility.Utils;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -163,7 +165,9 @@ public class Db_controller extends HttpServlet {
 
     private void insert_database(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
-            String path = ResponseMessages.DATABASE_PATH.getResponseMessages(); // path where all the resumes will save
+            System_Parameter_service system_Parameter_service = new System_Parameter_service();
+            Tblsystemparameter systemparameters = system_Parameter_service.getParameterByName("path_db");
+            String path = systemparameters.getSystem_parameter_value();
             String user_id = request.getParameter("user_id");
             String db_name = request.getParameter("db_name");
             String db_username = request.getParameter("db_username");
@@ -194,13 +198,13 @@ public class Db_controller extends HttpServlet {
                         is.read(data);      // reads the resume name
 
                         //FileOutputStream is used for writing streams of raw bytes such as image data, file data
-                        FileOutputStream fos = new FileOutputStream(path + dbFileUploaded);   // creating object with path and fileName parameters
+                        FileOutputStream fos = new FileOutputStream(path + File.separator + dbFileUploaded);   // creating object with path and fileName parameters
                         fos.write(data);    // storing file at the path location
                         fos.close();    // closing the FileOutputStream
 
 //                  renaming the resume with the unique name same as stored in database i.e. fileName
-                        File file = new File(path + dbFileUploaded);  // Create an object of the File class to Replace the file path with path of the directory
-                        File rename = new File(path + newDbFileName);    // Create an object of the File class to Replace the file path with path of the directory
+                        File file = new File(path + File.separator + dbFileUploaded);  // Create an object of the File class to Replace the file path with path of the directory
+                        File rename = new File(path + File.separator + newDbFileName);    // Create an object of the File class to Replace the file path with path of the directory
                         file.renameTo(rename);   //executing the file to change the name
                     }
                 } else {
@@ -218,8 +222,10 @@ public class Db_controller extends HttpServlet {
     private void download_database(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
             String user_id = Utils.requiredNotNull(request.getParameter("user_id"), "User ID must not be zero");
-            String db_path = db_service.selectDbPath(user_id);
-            System.out.println("com.qt.sad.controllers.Db_controller.download_project()::PATH::" + db_path);
+            System_Parameter_service system_Parameter_service = new System_Parameter_service();
+            Tblsystemparameter systemparameters = system_Parameter_service.getParameterByName("path_db");
+            String path = systemparameters.getSystem_parameter_value();
+            String db_path = path + File.separator + db_service.selectDbPath(user_id);
             message = db_service.download_file(db_path, request, response);
         } catch (Exception e) {
             message = "com.qt.sad.controllers.Db_controller.download_project()::" + e.getMessage();

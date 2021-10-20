@@ -165,7 +165,7 @@ public class System_Parameter_dao {
         return parameters;
     }
 
-    public Tblsystemparameter selectParameterByName(String sp_name) {
+    public Tblsystemparameter getParameterByName(String sp_name) {
         Tblsystemparameter parameter = new Tblsystemparameter();
         con = Saddu.connectDb();
         sql = "select * from " + TABLENAME + " where system_parameter_name = ?";

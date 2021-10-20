@@ -8,6 +8,7 @@ package com.qt.sad.controllers;
 import com.qt.sad.enums.ResponseMessages;
 import com.qt.sad.model.Tbladmin;
 import com.qt.sad.service.Admin_service;
+import com.qt.sad.utility.Utils;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,12 +36,12 @@ public class Admin_controller extends HttpServlet {
     Admin_service admin_service = new Admin_service();
     Tbladmin admin = new Tbladmin();
     String message;
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String action = request.getParameter("action");
-        
+
         switch (action) {
             case "login":
                 admin_login(request, response);
@@ -111,5 +112,6 @@ public class Admin_controller extends HttpServlet {
             }
         }
     }
-    
+
+
 }
